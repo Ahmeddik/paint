@@ -40,7 +40,7 @@ public class Buttons extends JPanel
     JRadioButton lin;
     JRadioButton ov;
     JRadioButton pen;
-    //JRadioButton erase;
+
     //Shapes variables
     Ovals oval;
     Rectangles rect;
@@ -92,6 +92,9 @@ public class Buttons extends JPanel
         clr.setBackground(Color.ORANGE);
         clr.setPreferredSize(new Dimension(100, 30));
         
+        undo = new JButton("UnDo");
+        undo.setBackground(Color.YELLOW);
+        undo.setPreferredSize(new Dimension(70, 30));
 //-----------------------------------------------------------
         this.add(rec);
         this.add(lin);
@@ -108,6 +111,7 @@ public class Buttons extends JPanel
         
         this.add(solid);
         
+        this.add(undo);
         this.add(erase);
         this.add(clr);
 //-----------------------------------------------------------
@@ -153,6 +157,18 @@ public class Buttons extends JPanel
                arr.clear();
                repaint();
                System.out.println("Clear All button pressed");
+           }
+       });
+        
+        undo.addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e)
+           {
+               if (!arr.isEmpty()) {
+                    arr.remove(arr.size()-1);
+                    repaint();
+                }
+               System.out.println("Undo button pressed");
            }
        });
 //----------------------------------------------------------------------
