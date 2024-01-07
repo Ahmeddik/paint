@@ -1,15 +1,24 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package projecttrail;
 
 import java.awt.*;
 import static java.awt.Color.*;
 import java.util.ArrayList;
 
+/*
+ * @author asedd & sondos
+ */
+
 public class  FreeHand extends GeneralShape
 {
-    private ArrayList<Integer>arrX= new ArrayList<Integer>();
-    private ArrayList<Integer>arrY= new ArrayList<Integer>();
+    private ArrayList<Integer>arrX= new ArrayList<>();
+    private ArrayList<Integer>arrY= new ArrayList<>();
     
     private int penTipSize;
+//-----------------------------------------------------------
     public FreeHand(){
         
     }
@@ -25,8 +34,7 @@ public class  FreeHand extends GeneralShape
         super(x1, y1, x2, y2, false,false,c.white);
         penTipSize=15;
     }
-
-
+//-----------------------------------------------------------
    @Override
     public void drawShape(Graphics2D g2d)
     {
@@ -42,8 +50,7 @@ public class  FreeHand extends GeneralShape
         } else{
             g2d.setColor(Color.BLACK);
         }
-        
-        
+
         arrX.add(getX2());
         arrY.add(getY2());
        

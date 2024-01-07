@@ -8,6 +8,11 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.*;
+
+/*
+ * @author asedd & sondos
+ */
+
 public class Buttons extends JPanel
 {
     //Variables for the coordinates of the shape
@@ -95,17 +100,15 @@ public class Buttons extends JPanel
         undo = new JButton("UnDo");
         undo.setBackground(Color.YELLOW);
         undo.setPreferredSize(new Dimension(70, 30));
-//-----------------------------------------------------------
+//------------------------------------------------------------------------------
         this.add(rec);
         this.add(lin);
         this.add(ov);
         this.add(pen);
-        //this.add(s);
         
         this.add(red);
         this.add(blue);
         this.add(green);
-        
         
         this.add(dott);
         
@@ -114,7 +117,7 @@ public class Buttons extends JPanel
         this.add(undo);
         this.add(erase);
         this.add(clr);
-//-----------------------------------------------------------
+//------------------------------------------------------------------------------
         red.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed (ActionEvent e){
@@ -171,7 +174,7 @@ public class Buttons extends JPanel
                System.out.println("Undo button pressed");
            }
        });
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------
         rec.addActionListener(new ActionListener()
         {
             @Override
@@ -210,7 +213,7 @@ public class Buttons extends JPanel
                System.out.println("penceil button pressed");
            }
        });
-//-----------------------------------------------------------
+//------------------------------------------------------------------------------
         dott.addItemListener(new ItemListener()
         {
             @Override
@@ -219,7 +222,7 @@ public class Buttons extends JPanel
                  System.out.println("dotted has been checked");
             }
         });
-//-----------------------------------------------------------
+//------------------------------------------------------------------------------
         solid.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e)
@@ -228,7 +231,7 @@ public class Buttons extends JPanel
                 System.out.println("filled has been checked");
             }
         });
-//-----------------------------------------------------------
+//------------------------------------------------------------------------------
         this.addMouseListener(new MouseListener()
         {
             @Override
@@ -267,12 +270,7 @@ public class Buttons extends JPanel
                 x2=e.getX();
                 y2=e.getY();
                 System.out.println("mouse released");
-                /*
-                shape.setX2(x2);
-                shape.setY2(y2);
-                arr.add(shape);
-                shape=null;
-                */
+                
                 switch(flag)
                 {
                     case "Rectangle":
@@ -317,7 +315,7 @@ public class Buttons extends JPanel
             public void mouseExited(MouseEvent e) {
             }
         });
-
+//------------------------------------------------------------------------------
         this.addMouseMotionListener(new MouseMotionListener() {
             @Override
             public void mouseDragged(MouseEvent e)
@@ -330,27 +328,22 @@ public class Buttons extends JPanel
                     case "Rectangle":
                         rect.setX2(x2);
                         rect.setY2(y2);
-                        //rect = new Rectangles(x1,y1,x2,y2,_fill,_dott, current_color);
                         break;
                     case "Line":
                         line.setX2(x2);
                         line.setY2(y2);
-                        //line = new Lines(x1,y1,x2,y2,_fill,_dott, current_color);
                         break;
                     case "Oval":
                         oval.setX2(x2);
                         oval.setY2(y2);
-                        //oval = new Ovals(x1,y1,x2,y2,_fill,_dott, current_color);
                         break;
                     case "freehand":
                         freehand.setX2(x2);
                         freehand.setY2(y2);
-                        //oval = new Ovals(x1,y1,x2,y2,_fill,_dott, current_color);
                         break;
                     case "eraser":
                         eraser.setX2(x2);
                         eraser.setY2(y2);
-                        //oval = new Ovals(x1,y1,x2,y2,_fill,_dott, current_color);
                         break;
                 }
                 repaint();
@@ -361,9 +354,8 @@ public class Buttons extends JPanel
             }
         });
     }
-    
-    
-    //@Override
+//------------------------------------------------------------------------------
+    @Override
     protected void paintComponent(Graphics g)
     {
         super.paintComponent(g);
@@ -392,7 +384,5 @@ public class Buttons extends JPanel
         {
             eraser.drawShape(g2d);
         }
-
-
     }
 }

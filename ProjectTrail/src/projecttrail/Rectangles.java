@@ -8,12 +8,13 @@ import java.awt.*;
 import static java.awt.Color.*;
 
 /*
- * @author asedd
+ * @author asedd & sondos
  */
+
 public class Rectangles extends GeneralShape{
     
     private int x,y,Weidth,Hight;
-    
+//-----------------------------------------------------------
     public Rectangles(){
         
     }
@@ -21,7 +22,7 @@ public class Rectangles extends GeneralShape{
     public Rectangles(int x1, int y1, int x2, int y2,boolean dash,boolean fill , Color c) {
         super(x1, y1, x2, y2, dash, fill, c);
     }
-    
+//-----------------------------------------------------------
     @Override
     public void drawShape(Graphics2D g2d)
     {
@@ -52,9 +53,5 @@ public class Rectangles extends GeneralShape{
             }
             g2d.drawRect(x, y, Weidth,Hight);
         }
-        //if(shape!=null)
-        //{
-            //g2d.drawRect(x, y, Weidth,Hight);
-        //}
     }
 }

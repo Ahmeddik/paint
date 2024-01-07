@@ -8,12 +8,13 @@ import java.awt.*;
 import static java.awt.Color.*;
 
 /*
- * @author asedd
+ * @author asedd & sondos
  */
+
 public class Ovals extends GeneralShape{
     
     private int x,y,height,width;
-    
+//-----------------------------------------------------------
     public Ovals(){
         
     }
@@ -22,7 +23,7 @@ public class Ovals extends GeneralShape{
     {
         super(x1, y1, x2, y2, dash, fill, c);
     }
-
+//-----------------------------------------------------------
     @Override
     public void drawShape(Graphics2D g2d) {
        

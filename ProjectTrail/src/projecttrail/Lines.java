@@ -8,12 +8,13 @@ import java.awt.*;
 import static java.awt.Color.*;
 
 /*
- * @author asedd
+ * @author asedd & sondos
  */
+
 public class Lines extends GeneralShape{
     
     private int x1,y1,x2,y2;
-    
+//--------------------------------------------------------
     public Lines(){
         
     }
@@ -21,12 +22,11 @@ public class Lines extends GeneralShape{
     public Lines(int x1, int y1, int x2, int y2,boolean dash,boolean fill , Color c) {
         super(x1, y1, x2, y2, dash, fill, c);
     }
-
+//--------------------------------------------------------
     @Override
     public void drawShape(Graphics2D g2d)
     {
-        
-        //g2d.setColor(currentColor);
+        //Setting color of the line
         if (getCurrentColor() == RED){
             g2d.setColor(Color.RED);
         } else if (getCurrentColor() == GREEN){
@@ -36,13 +36,12 @@ public class Lines extends GeneralShape{
         } else {
             g2d.setColor(Color.BLACK);
         }
-        
-        
+        //Identify the line's coordenations
         x1=getX1();
         y1=getY1();
         x2=getX2();
         y2=getY2();
-        
+        //Identify the line's state whether it's solidLine or dashedLine
         if (getDash() == true) {
             Stroke dashed = new BasicStroke(2, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 0, new float[]{9}, 0);
             g2d.setStroke(dashed);

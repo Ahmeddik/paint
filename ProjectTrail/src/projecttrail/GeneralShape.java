@@ -8,8 +8,9 @@ import java.awt.*;
 import javax.swing.*;
 
 /*
- * @author asedd
+ * @author asedd & sondos
  */
+
 public abstract class GeneralShape extends JPanel{
     private int x1,y1,x2,y2;
 
