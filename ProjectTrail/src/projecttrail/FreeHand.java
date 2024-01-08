@@ -22,13 +22,13 @@ public class  FreeHand extends GeneralShape
     public FreeHand(){
         
     }
-
+    //Constructor for the line
     public FreeHand(int x1, int y1, int x2, int y2, boolean dash, boolean fill , Color c)
     {
         super(x1, y1, x2, y2, dash, fill, c);
         penTipSize=2;
     }
-    
+    //Constructor for the eraser
     public FreeHand(int x1, int y1, int x2, int y2,Color c)
     {
         super(x1, y1, x2, y2, false,false,c.white);

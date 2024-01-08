@@ -4,6 +4,7 @@
  */
 package projecttrail;
 
+import java.awt.*;
 import javax.swing.*;
 
 /*
@@ -18,9 +19,11 @@ public class ProjectTrail
         
         f.setTitle("Pernameg El-Rassam By A.Seddik & Sondos");
         f.setSize(800,800);
+        f.setLocation(50, 50);
+        f.setResizable(false);
         
-        Buttons pp = new Buttons();
-        f.add(pp);
+        Buttons panel = new Buttons();
+        f.add(panel);
 
         f.setVisible(true);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

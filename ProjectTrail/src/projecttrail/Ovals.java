@@ -39,7 +39,7 @@ public class Ovals extends GeneralShape{
         }
         
        //modify the coordinates of the shape
-        x = Math.min(getX1(), getX2()); //return the min. x
+        x = Math.min(getX1(), getX2());
         y = Math.min(getY1(), getY2());
         width = Math.abs(getX1() - getX2());
         height = Math.abs(getY1() - getY2());
