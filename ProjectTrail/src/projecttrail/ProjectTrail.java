@@ -4,7 +4,6 @@
  */
 package projecttrail;
 
-import java.awt.*;
 import javax.swing.*;
 
 /*
@@ -21,7 +20,7 @@ public class ProjectTrail
         f.setSize(800,800);
         f.setLocation(50, 50);
         f.setResizable(false);
-        
+      
         Buttons panel = new Buttons();
         f.add(panel);
 
