@@ -16,7 +16,7 @@ public class ProjectTrail
     public static void main(String[] args) {
         JFrame f = new JFrame();
         
-        f.setTitle("Pernameg El-Rassam By A.Seddik & Sondos");
+        f.setTitle("Pernameg El-Rassam By Ahmed Seddik & Sondos Abd-Algyed");
         f.setSize(800,800);
         f.setLocation(50, 50);
         f.setResizable(false);
